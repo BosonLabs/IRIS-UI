@@ -6,6 +6,7 @@ import Modald from "../ModalD";
 import FolowStepsd from "../FolowStepsd";
 import FolowStepsdcopy from "../FolowStepsdcopy";
 import axios from 'axios';
+import config from '../configurl'
 
 const Swap = () => {
     let history = useHistory();
@@ -18,9 +19,9 @@ const Swap = () => {
     console.log("getr",getresponse)
   useEffect(() => {
     const fetchPosts = async () => {      
-        axios.get(`http://3.15.6.43:42101/irisapi/v1/users/${localStorage.getItem('wallet')}`).then(async(u) => {
+        axios.get(`${config}/users/${localStorage.getItem('wallet')}`).then(async(u) => {
             setUser(u.data)
-            await axios.get(`http://3.15.6.43:42101/irisapi/v1/kyc/${u.data['profileURL']}`).then((response)=>{
+            await axios.get(`${config}/kyc/${u.data['profileURL']}`).then((response)=>{
             setresponse(response.data)      
             })            
           })    
@@ -90,16 +91,23 @@ const Swap = () => {
                                     <thead>
                                         <tr>
                                             <th>Your Id</th>
+                                            <td>{getresponse['assetId']}</td>
+                                            </tr>
+                                            <tr>
                                             <th>Your Name</th>
+                                            <td>{getresponse['firstName']}</td>
+                                            </tr>
+                                            <tr>
                                             <th>Your Citizenship</th>
+                                            <td>{getresponse['citizenship']}</td>
                                             {/* <th>Your Email</th> */}
                                         </tr>
                                     </thead>
                                     <tbody className="text-center">
                                         <tr>
-                                            <td>{getresponse['assetId']}</td>
-                                            <td>{getresponse['firstName']}</td>
-                                            <td>{getresponse['citizenship']}</td>
+                                           
+                                            
+                                            
                                             {/* <td>{getresponse['accountType']}</td> */}
                                         </tr>
                                     </tbody>

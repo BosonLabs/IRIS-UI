@@ -8,13 +8,14 @@ import Portfolio from '../smartyield/Portfolio';
 import Pools from '../smartyield/Pools';
 import { Link } from "react-router-dom";
 import styles from "./FolowStepList/FolowSteps.module.sass";
+import config from '../../configurl'
 
 const Adminviewdb=()=> {  
   const [getactiveTab, activeTab] = useState("markets");
   const [getresponse, setresponse] = useState([]);
   useEffect(() => {
     const fetchPosts = async () => {      
-      const res = await axios.get(`http://3.15.6.43:42101/irisapi/v1/users`)
+      const res = await axios.get(`${config}/users`)
       setresponse(res.data)
       
     };
@@ -61,7 +62,7 @@ const Adminviewdb=()=> {
     return (
       <div className="Home">
         <div className="lander">
-          <h1>Admin Db page</h1>          
+          <h3>Approve Kyc</h3>          
           {/* <button type="button" onClick={()=>makeAPICall()}>Retrive</button>       */}
           <table className="table table-striped table-bordered">
                 <thead>
