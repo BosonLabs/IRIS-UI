@@ -7,25 +7,9 @@ import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Input, InputGroup
 import icon from "../assets/img/icon.PNG";
 import icon1 from "../assets/img/icon1.PNG";
 import icon3 from "../assets/img/icon3.PNG";
-import Pools from '../components/farming/Pools';
-//import cbusd from "./cbusdAbi";
 import CustomCard from '../components/global/CustomCard';
-//import black from "./blackAbi";
-//import CFI from "./carbonFinanceAbi";
-import web3 from "../web3";
 import Posts from '../components/Posts';
 import Pagination from '../components/Pagination';
-import FormData from 'form-data';
-//import valutadapter from"./vaultAdapterAbi";
-//import carbonoracle from "./carbonOracleAbi";
-//import carbonStake from "./carbonStakeAbi";
-//import busd from "./busdAbi";
-//import cbusdtoken from "./cbusdAbi";
-//import cbusdpair from "./lptokenAbi";
-//import black from "./blackabi";
-
-import { contracts } from './contractAddress';
-import {blackabi, cbusd,busd ,cbusdbusdpair,carbonfinance} from './abi';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from 'axios';
@@ -147,8 +131,8 @@ class Dashboardduplicate extends Component {
                                 </div>
                                 <div className="step-text">
                                     <h4 class="title">CREATE USERS</h4>
-                                    <p class="date">Nov 2nd 2021</p>
-                                    <p class="time">20:30 </p>
+                                    {/* <p class="date">Nov 2nd 2021</p>
+                                    <p class="time">20:30 </p> */}
                                 </div>
                             </div>
                         ):(
@@ -160,8 +144,8 @@ class Dashboardduplicate extends Component {
                                 </div>
                                 <div className="step-text">
                                     <h4 class="title">CREATE USERS</h4>
-                                    <p class="date">Nov 2nd 2021</p>
-                                    <p class="time">20:30 </p>
+                                    {/* <p class="date">Nov 2nd 2021</p>
+                                    <p class="time">20:30 </p> */}
                                 </div>
                             </div>
                         )}                            
@@ -174,8 +158,8 @@ class Dashboardduplicate extends Component {
                                 </div>
                                 <div className="step-text">
                                     <h4 class="title">APPROVED</h4>
-                                    <p class="date">Nov 2nd 2021</p>
-                                    <p class="time">20:30 </p>
+                                    {/* <p class="date">Nov 2nd 2021</p>
+                                    <p class="time">20:30 </p> */}
                                 </div>
                             </div>
                             ):(
@@ -187,8 +171,8 @@ class Dashboardduplicate extends Component {
                                 </div>
                                 <div className="step-text">
                                     <h4 class="title">APPROVED</h4>
-                                    <p class="date">Nov 2nd 2021</p>
-                                    <p class="time">20:30 </p>
+                                    {/* <p class="date">Nov 2nd 2021</p>
+                                    <p class="time">20:30 </p> */}
                                 </div>
                             </div>
                             )}
@@ -203,8 +187,8 @@ class Dashboardduplicate extends Component {
                               </div>
                               <div className="step-text">
                               <h4 class="title">CREATE D-ID</h4>
-                              <p class="date">Nov 2nd 2021</p>
-                              <p class="time">20:30 </p>
+                              {/* <p class="date">Nov 2nd 2021</p>
+                              <p class="time">20:30 </p> */}
                               </div>
                              </div>
                              <div className="step" style={{color:"#2a7cda"}}>
@@ -215,8 +199,8 @@ class Dashboardduplicate extends Component {
                              </div>
                              <div className="step-text">
                                  <h4 class="title">COMPLETED</h4>
-                                 <p class="date">Nov 2nd 2021</p>
-                                 <p class="time">20:30 </p>
+                                 {/* <p class="date">Nov 2nd 2021</p>
+                                 <p class="time">20:30 </p> */}
                              </div>
                          </div>
                          </>
@@ -230,8 +214,8 @@ class Dashboardduplicate extends Component {
                                 </div>
                                 <div className="step-text">
                                     <h4 class="title">CREATE D-ID</h4>
-                                    <p class="date">Nov 2nd 2021</p>
-                                    <p class="time">20:30 </p>
+                                    {/* <p class="date">Nov 2nd 2021</p>
+                                    <p class="time">20:30 </p> */}
                                 </div>
                             </div>
                             <div className="step" style={{color:"rgba(6, 10, 13, 0.5)"}}>
@@ -242,8 +226,8 @@ class Dashboardduplicate extends Component {
                             </div>
                             <div className="step-text">
                                 <h4 class="title">COMPLETED</h4>
-                                <p class="date">Nov 2nd 2021</p>
-                                <p class="time">20:30 </p>
+                                {/* <p class="date">Nov 2nd 2021</p>
+                                <p class="time">20:30 </p> */}
                             </div>
                         </div>
                         </>
