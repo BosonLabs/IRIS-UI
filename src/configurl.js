@@ -1,2 +1,2 @@
-const url = `http://18.218.150.75:42101/irisapi/v1`
+const url = `http://13.59.163.247:42101/irisapi/v1`
 export default url;
