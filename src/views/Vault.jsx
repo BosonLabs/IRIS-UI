@@ -18,6 +18,7 @@ import ModaldConnect from "../ModalDConnect";
 import ModalDLoading from '../ModalDLoading';
 import FolowStepsLoading from '../FolowStepsLoading';
 import config from '../configurl'
+import jsonfile from '../config.json'
 
 const Vault = () => {
   const [getcurrents, setcurrents] = useState(""); 
@@ -65,8 +66,8 @@ const Vault = () => {
     })    
   }, []);
   
-    const pinataApiKey = "221cfff25de18e88d3d0";
-    const pinataApiSecret = "ddffffed103d82a6296a378c80ddd2b4280b0d8a51e6922122fd3817accb45ba";
+    const pinataApiKey = jsonfile.PinataAPIKey;
+    const pinataApiSecret = jsonfile.PinataSecretAPIKey;
     const pinataSDK = require('@pinata/sdk');
     const pinata = pinataSDK(pinataApiKey, pinataApiSecret);
     const nftWorkspacePath = __dirname + '/workspace';
@@ -246,7 +247,7 @@ const Vault = () => {
     }
       const algosdk = require('algosdk');
       const tokenapp = {
-          'X-API-key' : 'SVsJKi8vBM1RwK1HEuwhU20hYmwFJelk8bagKPin',
+          'X-API-key' : jsonfile.PurestackAccountAPI,
         }
       const server = "https://testnet-algorand.api.purestake.io/ps2";
       let algodPort = "";
@@ -266,8 +267,8 @@ const Vault = () => {
         let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
         let yyyy = today.getFullYear();
         today = mm + '/' + dd + '/' + yyyy;                                                                 
-        let pinataApiKey='221cfff25de18e88d3d0';
-        let pinataSecretApiKey='ddffffed103d82a6296a378c80ddd2b4280b0d8a51e6922122fd3817accb45ba';
+        let pinataApiKey= jsonfile.PinataAPIKey;
+        let pinataSecretApiKey= jsonfile.PinataSecretAPIKey;
         const pinataSDK = require('@pinata/sdk');
         const pinata = pinataSDK(pinataApiKey, pinataSecretApiKey);
             pinata.testAuthentication().then((result) => {            
@@ -337,7 +338,7 @@ const Vault = () => {
                         const server = "https://testnet-algorand.api.purestake.io/ps2";
                         const port = "";  
                         const token = {
-                              'X-API-key' : 'SVsJKi8vBM1RwK1HEuwhU20hYmwFJelk8bagKPin',
+                              'X-API-key' : jsonfile.PurestackAccountAPI,
                         }    
                         let algodClient = new algosdk.Algodv2(token, server, port);
                         //setmetadata(`https://gateway.pinata.cloud/ipfs/"+${result['IpfsHash']}`)
